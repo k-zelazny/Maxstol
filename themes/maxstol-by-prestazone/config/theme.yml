@@ -1,0 +1,81 @@
+parent: hummingbird
+name: maxstol-by-prestazone
+display_name: Maxstol by PrestaZone
+version: 1.0.0
+author:
+  name: "PrestaZone"
+  email: "bok@prestazone.pl"
+  url: "https://prestazone.pl"
+
+assets:
+  use_parent_assets: false
+  css:
+    all:
+      # Libraries
+      - id: fonts
+        path: assets/fonts/fonts.css
+      - id: swiper
+        path: assets/libs/swiper/swiper-bundle.min.css
+      # Global
+      - id: global
+        path: assets/css/global.css
+    index:
+      - id: index
+        path: assets/css/index.css
+    cart:
+      - id: cart
+        path: assets/css/cart.css
+    order-confirmation:
+      - id: order-confirmation
+        path: assets/css/order-confirmation.css
+  js:
+    all:
+      # Libraries
+      - id: swiper
+        path: assets/libs/swiper/swiper-bundle.min.js
+      # Global
+      - id: global
+        path: assets/js/global.js
+    index:
+      - id: index
+        path: assets/js/index.js
+    cart:
+      - id: cart
+        path: assets/js/cart.js
+
+global_settings:
+  modules:
+    to_enable:
+      - ps_linklist
+      - ps_languageselector
+      - ps_currencyselector
+      - ps_customeraccountlinks
+      - blockwishlist
+      - ps_imageslider
+      - ps_customtext
+      - ps_featuredproducts
+      - ps_banner
+      - ps_newproducts
+      - ps_bestsellers
+  hooks:
+    modules_to_hook:
+      displayNav1:
+        - ps_contactinfo
+      displayTop:
+        - ps_mainmenu
+      displaySearch:
+        - ps_searchbar
+      displayNav2:
+        - ps_shoppingcart
+        - ps_customersignin
+      displayHome:
+        - ps_imageslider
+        - contactform
+      displayFooter:
+        - ps_linklist
+        - ps_contactinfo
+      displayFooterBefore:
+        - ps_emailsubscription
+        - ps_socialfollow
+      displayFooterAfter:
+        - blockreassurance

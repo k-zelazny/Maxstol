@@ -1,0 +1,7 @@
+#order-confirmation #content-wrapper {
+  padding-block: 96px !important;
+}
+
+#order-confirmation .checkout-progress {
+  margin-block-end: 32px;
+}
