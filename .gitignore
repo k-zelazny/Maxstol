@@ -18,8 +18,8 @@
 # Except for the themes
 !/themes/
 
-!/themes/maxstol/
-!/themes/maxstol/**
+!/themes/maxstol-by-prestazone/
+!/themes/maxstol-by-prestazone/**
 
 !/themes/hummingbird/
 !/themes/hummingbird/**

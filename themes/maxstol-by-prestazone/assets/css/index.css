@@ -13,21 +13,6 @@ section.ps-imageslider .carousel .carousel-item {
   position: relative;
 }
 
-section.ps-imageslider .carousel .carousel-item::before {
-  content: '';
-  width: 100%;
-  height: 100%;
-  background-image: url("data:image/svg+xml,%3Csvg width='1320' height='539' viewBox='0 0 1320 539' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_905_2)'%3E%3Cmask id='mask0_905_2' style='mask-type:luminance' maskUnits='userSpaceOnUse' x='0' y='0' width='1320' height='539'%3E%3Cpath d='M1320 0H0V539H1320V0Z' fill='white'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_905_2)'%3E%3Cmask id='mask1_905_2' style='mask-type:luminance' maskUnits='userSpaceOnUse' x='-772' y='-810' width='1885' height='1858'%3E%3Cpath d='M-280.051 1047.37L1112.57 539.227L620.627 -809.007L-771.994 -300.867L-280.051 1047.37Z' fill='white'/%3E%3C/mask%3E%3Cg mask='url(%23mask1_905_2)'%3E%3Cpath d='M701.55 18.9519C537.336 64.6944 549 191.483 656.489 335.931C785.229 508.952 663.295 660.197 445.541 608.456C136.549 535.034 178.165 765.627 264.184 848.79L-280.048 1047.37L-771.999 -300.853L-169.265 -520.783C-31.8667 -398.313 215.297 -618.693 237.755 -307.562C253.996 -82.468 420.192 -209.872 462.897 -245.526C551.173 -319.234 720.573 -408.174 810.227 -273.204C888.629 -155.147 811.067 -11.5631 701.55 18.9519Z' fill='%23FBFBFB'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_905_2'%3E%3Crect width='1320' height='539' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
-  background-size: auto 100%;
-  background-repeat: no-repeat;
-  background-position: left;
-  position: absolute;
-  left: 0;
-  top: 0;
-  display: block;
-  pointer-events: none;
-}
-
 section.ps-imageslider .carousel .carousel-item .carousel-caption {
   max-width: 100%;
   width: 100%;
@@ -39,7 +24,7 @@ section.ps-imageslider .carousel .carousel-item :is(h1, h2, h3, h4, h5, h6) {
   font-size: 2rem;
   font-weight: 700;
   line-height: 120%;
-  color: var(--color-gray-900);
+  color: var(--color-white);
   margin-block-end: 8px;
 }
 
@@ -47,12 +32,12 @@ section.ps-imageslider .carousel .carousel-item :is(li, p) {
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 150%;
-  color: var(--color-body);
+  color: var(--color-white);
 }
 
 section.ps-imageslider .carousel .carousel-item a {
   width: fit-content;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 500;
   line-height: 140%;
   color: var(--color-white);
@@ -61,6 +46,10 @@ section.ps-imageslider .carousel .carousel-item a {
   border-radius: 6px;
   display: block;
   margin-block-start: 32px;
+}
+
+section.ps-imageslider .carousel .carousel-item a:hover {
+  background: var(--color-gray-900);
 }
 
 section.ps-imageslider .carousel .carousel-item .caption-description {
