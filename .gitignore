@@ -1,0 +1,25 @@
+# Ingore all
+/*
+/themes/*
+.DS_Store
+
+# Except for the following files
+!.gitignore
+!README.md
+
+# Except for the modules
+!/modules/
+!/modules/**
+
+# Except for the overrides
+!/override/
+!/override/**
+
+# Except for the themes
+!/themes/
+
+!/themes/maxstol/
+!/themes/maxstol/**
+
+!/themes/hummingbird/
+!/themes/hummingbird/**
