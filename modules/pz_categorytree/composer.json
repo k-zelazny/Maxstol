@@ -1,0 +1,15 @@
+{
+  "name": "prestazone/pz_categorytree",
+  "description": "Displays main categories as expandable sections with subcategory product counters.",
+  "version": "1.0.0",
+  "type": "prestashop-module",
+  "license": "proprietary",
+  "config": {
+    "prepend-autoloader": false
+  },
+  "autoload": {
+    "psr-4": {
+      "PrestaZone\\CategoryTree\\": "src/"
+    }
+  }
+}
