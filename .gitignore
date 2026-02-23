@@ -1,21 +1,16 @@
 # Ingore all
 /*
-/themes/*
-.DS_Store
 
-# Except for the following files
-!.gitignore
-!README.md
-
-# Except for the modules
+# Modules catalog
 !/modules/
 !/modules/**
 
-# Except for the overrides
+# Override catalog
 !/override/
 !/override/**
 
-# Except for the themes
+# Theme catalog
+/themes/*
 !/themes/
 
 !/themes/maxstol-by-prestazone/
@@ -23,3 +18,10 @@
 
 !/themes/hummingbird/
 !/themes/hummingbird/**
+
+# System files
+.DS_Store
+
+# Repo files
+!.gitignore
+!README.md
