@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="ModulesPzorderconfirmationFront.xlf" source-language="pl-PL" target-language="pl-PL" datatype="plaintext">
+    <body>
+      <trans-unit id="af0f5bdc5be121b9307687aeeae38c17">
+        <source>Delivery address</source>
+        <target>Adres dostawy</target>
+      </trans-unit>
+      <trans-unit id="104d9898c04874d0fbac36e125fa1369">
+        <source>Discount</source>
+        <target>Rabat</target>
+      </trans-unit>
+      <trans-unit id="ce8ae9da5b7cd6c3df2929543a9af92d">
+        <source>Email</source>
+        <target>Email</target>
+      </trans-unit>
+      <trans-unit id="a26ba4e08256fcc6bb108cadd1b3f44e">
+        <source>Order amount</source>
+        <target>Kwota zamówienia</target>
+      </trans-unit>
+      <trans-unit id="559e7ca805230fc80e3644f87bb3994d">
+        <source>Order date</source>
+        <target>Data zamówienia</target>
+      </trans-unit>
+      <trans-unit id="f5d74ea75357b5e139854c14f8e24fe3">
+        <source>Order details</source>
+        <target>Szczegóły zamówienia</target>
+      </trans-unit>
+      <trans-unit id="f0aaaae189e9c7711931a65ffcd22543">
+        <source>Payment method</source>
+        <target>Metoda płatności</target>
+      </trans-unit>
+      <trans-unit id="1f8261d17452a959e013666c5df45e07">
+        <source>Phone number</source>
+        <target>Telefon</target>
+      </trans-unit>
+      <trans-unit id="3601146c4e948c32b6424d2c0a7f0118">
+        <source>Price</source>
+        <target>Cena</target>
+      </trans-unit>
+      <trans-unit id="ea9cf7e47ff33b2be14e6dd07cbcefc6">
+        <source>Shipping</source>
+        <target>Dostawa</target>
+      </trans-unit>
+      <trans-unit id="83d893ae1e34a74ab9a068e1d190c764">
+        <source>Shipping method</source>
+        <target>Sposób dostawy</target>
+      </trans-unit>
+      <trans-unit id="96b0141273eabab320119c467cdcaf17">
+        <source>Total</source>
+        <target>Razem</target>
+      </trans-unit>
+      <trans-unit id="43183e955e3019bf7f8c942e016b7b13">
+        <source>VAT</source>
+        <target>VAT</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="ModulesPzorderconfirmationAdmin.xlf" source-language="pl-PL" target-language="pl-PL" datatype="plaintext">
+    <body>
+      <trans-unit id="a342fb7e80121595025835e024be8c27">
+        <source>Allows you to replace the standard order confirmation page with a custom view with extended order information.</source>
+        <target>Umożliwia zastąpienie strony potwierdzenia zamówienia niestandardowym widokiem zawierającym rozszerzone informacje o zamówieniu.</target>
+      </trans-unit>
+      <trans-unit id="fb077ecba55e5552916bde26d8b9e794">
+        <source>Order confirmation</source>
+        <target>Potwierdzenie zamówienia</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
