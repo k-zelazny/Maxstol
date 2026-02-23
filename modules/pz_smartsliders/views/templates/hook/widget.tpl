@@ -69,7 +69,8 @@
 
   @media (max-width: 991.98px) {
     .pz-smartsliders {
-      gap: 36px;
+      gap: 24px;
+      padding-block: 32px;
     }
   }
 

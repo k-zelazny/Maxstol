@@ -25,12 +25,18 @@ assets:
     category:
       - id: category
         path: assets/css/category.css
+    product:
+      - id: product
+        path: assets/css/product.css
     cart:
       - id: cart
         path: assets/css/cart.css
     order-confirmation:
       - id: order-confirmation
         path: assets/css/order-confirmation.css
+    contact:
+      - id: contact
+        path: assets/css/contact.css
   js:
     all:
       # Libraries
@@ -91,6 +97,10 @@ global_settings:
         - blockreassurance
       displayLeftColumn:
         - ps_facetedsearch
+      displayContactLeftColumn:
+        - ps_contactinfo
+      displayContactRightColumn:
+        - contactform
 
   image_types:
     cart_default:
@@ -167,6 +177,6 @@ theme_settings:
     best-sales: layout-full-width
     new-products: layout-full-width
     prices-drop: layout-full-width
-    contact: layout-left-column
+    contact: layout-full-width
     manufacturer: layout-left-column
     supplier: layout-left-column

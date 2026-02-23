@@ -182,6 +182,10 @@ section.contact-form .alert ul {
 }
 
 @media (max-width: 991.98px) {
+  section.contact-form {
+    padding-block: 32px;
+  }
+  
   section.contact-form form {
     margin-block-start: 32px;
   }

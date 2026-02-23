@@ -2,7 +2,7 @@
   <h2 class="contact-form__title h3">{l s='Get in touch with us' d='Maxstol.Theme.Contact'}</h2>
   <p class="contact-form__desc body-small">{l s='Having a technical issue? Want to send feedback on a beta feature? Need details about our business plan? Let us know.' d='Maxstol.Theme.Contact'}</p>
   
-  <form action="{$urls.base_url}" method="post" {if $contact.allow_file_upload}enctype="multipart/form-data"{/if}>
+  <form action="{if $page.page_name === 'index'}{$urls.base_url}{else}{$urls.pages.contact}{/if}" method="post" {if $contact.allow_file_upload}enctype="multipart/form-data"{/if}>
     {if $notifications}
       <div class="alert {if $notifications.nw_error}alert-danger{else}alert-success{/if}">
         <ul>

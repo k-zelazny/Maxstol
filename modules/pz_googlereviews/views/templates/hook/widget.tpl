@@ -122,6 +122,13 @@
     }
   }
   
+  @media (max-width: 991.98px) {
+    .pz-googlereviews {
+      gap: 24px;
+      padding-block: 32px;
+    }
+  }
+  
   @media (max-width: 767.98px) {
     .pz-googlereviews .pz-googlereviews__blocks {
       grid-template-columns: 1fr;
