@@ -25,12 +25,6 @@
 
     <main id="wrapper" class="wrapper">
       {hook h='displayWrapperTop'}
-      
-      {if $page.page_name !== 'cart' && $page.page_name !== 'checkout' && $page.page_name !== 'order-confirmation'}
-        {block name='breadcrumb'}
-          {include file='_partials/breadcrumb.tpl'}
-        {/block}
-      {/if}
 
       {block name='content_columns'}
         <div class="{block name='container_class'}container{/block}">

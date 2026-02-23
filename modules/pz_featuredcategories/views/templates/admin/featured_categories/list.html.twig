@@ -1,0 +1,84 @@
+{% extends '@PrestaShop/Admin/layout.html.twig' %}
+
+{% block stylesheets %}
+  {{ parent() }}
+  <link rel="stylesheet" href="{{ asset('../modules/pz_featuredcategories/views/css/widget.css') }}">
+{% endblock %}
+
+{% block content %}
+  <div class="panel pzfc-legacy-panel">
+    <h3>
+      {{ 'Categories List'|trans({}, 'Modules.Pzfeaturedcategories.Admin') }}
+    </h3>
+
+    <div class="pzfc-legacy-header-right pzfc-legacy-header">
+      <a href="{{ createUrl }}" class="btn btn-primary">
+        <i class="material-icons">add</i>
+        {{ 'Add new item'|trans({}, 'Modules.Pzfeaturedcategories.Admin') }}
+      </a>
+    </div>
+
+    <div class="table-responsive-row clearfix">
+      <table class="pzfc-legacy-table table" id="pzfc-sortable" data-reorder-url="{{ reorderUrl }}">
+        <thead>
+          <tr class="nodrag nodrop">
+            <th class="fixed-width-sm">{{ 'ID'|trans({}, 'Modules.Pzfeaturedcategories.Admin') }}</th>
+            <th>{{ 'Name'|trans({}, 'Modules.Pzfeaturedcategories.Admin') }}</th>
+            <th>{{ 'Category'|trans({}, 'Modules.Pzfeaturedcategories.Admin') }}</th>
+            <th class="text-center">{{ 'Status'|trans({}, 'Modules.Pzfeaturedcategories.Admin') }}</th>
+            <th class="text-right">{{ 'Actions'|trans({}, 'Modules.Pzfeaturedcategories.Admin') }}</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {% for item in items %}
+            <tr data-item-id="{{ item.id_item }}" draggable="true">
+              <td class="fixed-width-sm pzfc-drag-cell">
+                <i class="material-icons pzfc-drag-handle" title="{{ 'Drag to reorder'|trans({}, 'Modules.Pzfeaturedcategories.Admin') }}">drag_indicator</i>
+                {{ item.id_item }}
+              </td>
+              <td>{{ item.title|default('-') }}</td>
+              <td>{{ item.category_name|default('-') }} (ID: {{ item.id_category }})</td>
+              <td class="text-center">
+                <button
+                  type="button"
+                  class="btn btn-link pzfc-status-btn js-pzfc-toggle-icon"
+                  data-url="{{ path(toggleRoute, {'itemId': item.id_item}) }}"
+                  data-active="{{ item.active ? 1 : 0 }}"
+                  aria-label="{{ 'Toggle status'|trans({}, 'Modules.Pzfeaturedcategories.Admin') }}"
+                >
+                  {% if item.active %}
+                    <span class="pzfc-status-ok">✓</span>
+                  {% else %}
+                    <span class="pzfc-status-ko">×</span>
+                  {% endif %}
+                </button>
+              </td>
+              <td class="text-right">
+                <a class="btn btn-default" href="{{ path('admin_pz_featured_categories_edit', {'itemId': item.id_item}) }}">
+                  <i class="material-icons">edit</i>
+                  {{ 'Edit'|trans({}, 'Modules.Pzfeaturedcategories.Admin') }}
+                </a>
+                <form method="post" action="{{ path(deleteRoute, {'itemId': item.id_item}) }}" class="d-inline-block" onsubmit="return confirm('{{ 'Delete this item?'|trans({}, 'Modules.Pzfeaturedcategories.Admin') }}');">
+                  <button type="submit" class="btn btn-danger">
+                    <i class="material-icons">delete</i>
+                    {{ 'Delete'|trans({}, 'Modules.Pzfeaturedcategories.Admin') }}
+                  </button>
+                </form>
+              </td>
+            </tr>
+          {% else %}
+            <tr>
+              <td colspan="5" class="p-3 text-center">{{ 'No items yet.'|trans({}, 'Modules.Pzfeaturedcategories.Admin') }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+{% endblock %}
+
+{% block javascripts %}
+  {{ parent() }}
+  <script src="{{ asset('../modules/pz_featuredcategories/views/js/widget.js') }}"></script>
+{% endblock %}

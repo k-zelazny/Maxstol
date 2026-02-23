@@ -1,0 +1,111 @@
+{% extends '@PrestaShop/Admin/layout.html.twig' %}
+
+{% block stylesheets %}
+  {{ parent() }}
+  <link rel="stylesheet" href="{{ asset('../modules/pz_featuredcategories/views/css/widget.css') }}">
+{% endblock %}
+
+{% block content %}
+  <div class="card pzfc-card">
+    <h3 class="card-header">
+      {% if editItem %}
+        {{ 'Edit featured category item'|trans({}, 'Modules.Pzfeaturedcategories.Admin') }}
+      {% else %}
+        {{ 'New featured category item'|trans({}, 'Modules.Pzfeaturedcategories.Admin') }}
+      {% endif %}
+    </h3>
+
+    <div class="card-body">
+      <form action="{{ saveUrl }}" method="post" enctype="multipart/form-data" class="pzfc-form">
+        <input type="hidden" name="item_id" value="{{ editItem.id_item|default(0) }}">
+        <input type="hidden" name="existing_media_path" value="{{ editItem.media_path|default('') }}">
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="form-control-label">{{ 'Category'|trans({}, 'Modules.Pzfeaturedcategories.Admin') }}</label>
+              <select name="id_category" class="form-control" required>
+                <option value="">{{ 'Choose category'|trans({}, 'Modules.Pzfeaturedcategories.Admin') }}</option>
+                {% for category in categories %}
+                  <option value="{{ category.id_category }}" {% if editItem and editItem.id_category == category.id_category %}selected{% endif %}>
+                    {{ category.name }}
+                  </option>
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="form-group">
+              <label class="form-control-label">{{ 'Media type'|trans({}, 'Modules.Pzfeaturedcategories.Admin') }}</label>
+              <select name="media_type" class="form-control">
+                <option value="image" {% if not editItem or editItem.media_type == 'image' %}selected{% endif %}>
+                  {{ 'Image'|trans({}, 'Modules.Pzfeaturedcategories.Admin') }}
+                </option>
+                <option value="video" {% if editItem and editItem.media_type == 'video' %}selected{% endif %}>
+                  {{ 'Video'|trans({}, 'Modules.Pzfeaturedcategories.Admin') }}
+                </option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="form-group">
+              <label class="form-control-label">{{ 'Status'|trans({}, 'Modules.Pzfeaturedcategories.Admin') }}</label>
+              <div class="form-control-plaintext">
+                <label>
+                  <input type="checkbox" name="active" value="1" {% if not editItem or editItem.active %}checked{% endif %}>
+                  {{ 'Active'|trans({}, 'Modules.Pzfeaturedcategories.Admin') }}
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label">{{ 'Image / Video file'|trans({}, 'Modules.Pzfeaturedcategories.Admin') }}</label>
+          <input type="file" name="media_file" class="form-control" accept="image/*,video/mp4,video/webm,video/ogg,video/quicktime">
+          {% if editItem and editItem.media_path %}
+            <small class="text-muted form-text">{{ 'Current file:'|trans({}, 'Modules.Pzfeaturedcategories.Admin') }} {{ editItem.media_path }}</small>
+          {% endif %}
+        </div>
+
+        <ul class="nav nav-tabs" role="tablist">
+          {% for language in languages %}
+            <li class="nav-item">
+              <a class="nav-link {% if language.id_lang == defaultLangId %}active{% endif %}" data-toggle="tab" href="#pzfc-lang-{{ language.id_lang }}" role="tab">
+                {{ language.iso_code|upper }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+
+        <div class="tab-content pzfc-lang-content">
+          {% for language in languages %}
+            {% set translation = editItem.translations[language.id_lang]|default({}) %}
+            <div class="tab-pane {% if language.id_lang == defaultLangId %}active{% endif %}" id="pzfc-lang-{{ language.id_lang }}" role="tabpanel">
+              <div class="form-group m-t-1">
+                <label class="form-control-label">{{ 'Title'|trans({}, 'Modules.Pzfeaturedcategories.Admin') }} ({{ language.iso_code|upper }})</label>
+                <input type="text" class="form-control" name="title_{{ language.id_lang }}" value="{{ translation.title|default('') }}" maxlength="255">
+              </div>
+
+              <div class="form-group">
+                <label class="form-control-label">{{ 'Short description'|trans({}, 'Modules.Pzfeaturedcategories.Admin') }} ({{ language.iso_code|upper }})</label>
+                <textarea class="form-control" name="short_description_{{ language.id_lang }}" rows="3">{{ translation.short_description|default('') }}</textarea>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+        <div class="m-t-2">
+          <button type="submit" class="btn btn-primary">
+            {{ 'Save item'|trans({}, 'Modules.Pzfeaturedcategories.Admin') }}
+          </button>
+          <a href="{{ listUrl }}" class="btn-outline-secondary btn">
+            {{ 'Back to list'|trans({}, 'Modules.Pzfeaturedcategories.Admin') }}
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+{% endblock %}

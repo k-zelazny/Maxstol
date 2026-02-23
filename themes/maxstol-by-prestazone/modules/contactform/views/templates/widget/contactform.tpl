@@ -63,6 +63,5 @@
         <input class="btn btn-primary" type="submit" name="submitMessage" value="{l s='Send message' d='Maxstol.Theme.Contact'}">
       </footer>
     {/if}
-
   </form>
 </section>

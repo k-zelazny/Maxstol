@@ -22,6 +22,9 @@ assets:
     index:
       - id: index
         path: assets/css/index.css
+    category:
+      - id: category
+        path: assets/css/category.css
     cart:
       - id: cart
         path: assets/css/cart.css
@@ -44,6 +47,8 @@ assets:
         path: assets/js/cart.js
 
 global_settings:
+  configuration:
+    PS_IMAGE_QUALITY: png
   modules:
     to_enable:
       - ps_linklist
@@ -70,6 +75,11 @@ global_settings:
         - ps_customersignin
       displayHome:
         - ps_imageslider
+        - pz_featuredcategories
+        - pz_smartsliders
+        - pz_banner
+        - pz_featuredproducts
+        - pz_googlereviews
         - contactform
       displayFooter:
         - ps_linklist
@@ -79,3 +89,84 @@ global_settings:
         - ps_socialfollow
       displayFooterAfter:
         - blockreassurance
+      displayLeftColumn:
+        - ps_facetedsearch
+
+  image_types:
+    cart_default:
+      width: 125
+      height: 125
+      scope: [products]
+    small_default:
+      width: 98
+      height: 98
+      scope: [products, categories, manufacturers, suppliers]
+    medium_default:
+      width: 452
+      height: 452
+      scope: [products, manufacturers, suppliers]
+    home_default:
+      width: 250
+      height: 250
+      scope: [products]
+    large_default:
+      width: 800
+      height: 800
+      scope: [products, manufacturers, suppliers]
+    category_default:
+      width: 141
+      height: 180
+      scope: [categories]
+    stores_default:
+      width: 170
+      height: 115
+      scope: [stores]
+    default_xs:
+      width: 120
+      height: 120
+      scope: [products, manufacturers, suppliers, categories]
+    default_s:
+      width: 160
+      height: 160
+      scope: [categories, products]
+    default_m:
+      width: 200
+      height: 200
+      scope: [stores, manufacturers, suppliers, products]
+    default_md:
+      width: 320
+      height: 320
+      scope: [categories, products]
+    default_xl:
+      width: 400
+      height: 400
+      scope: [stores, products]
+    product_main:
+      width: 720
+      height: 720
+      scope: [products]
+    category_cover:
+      width: 1000
+      height: 200
+      scope: [categories]
+    product_main_2x:
+      width: 1440
+      height: 1440
+      scope: [products]
+    category_cover_2x:
+      width: 2000
+      height: 400
+      scope: [categories]
+
+
+theme_settings:
+  rtl_generation: false
+  default_layout: layout-full-width
+  layouts:
+    category: layout-full-width
+    best-sales: layout-full-width
+    new-products: layout-full-width
+    prices-drop: layout-full-width
+    contact: layout-left-column
+    manufacturer: layout-left-column
+    supplier: layout-left-column

@@ -1,0 +1,10 @@
+# macOS Files
+.DS_Store
+
+# Prestashop Files
+config.xml
+config_*.xml
+
+# Module Files
+views/uploads/*
+!views/uploads/index.php

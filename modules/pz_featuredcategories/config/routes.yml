@@ -1,0 +1,55 @@
+admin_pz_featured_categories_index:
+  path: /pz-featured-categories
+  methods: [GET]
+  defaults:
+    _controller: 'PrestaZone\FeaturedCategories\Controller\Admin\FeaturedCategoryController::indexAction'
+    _legacy_controller: 'AdminPzFeaturedCategories'
+    _legacy_link: 'AdminPzFeaturedCategories'
+
+admin_pz_featured_categories_create:
+  path: /pz-featured-categories/create
+  methods: [GET]
+  defaults:
+    _controller: 'PrestaZone\FeaturedCategories\Controller\Admin\FeaturedCategoryController::createAction'
+    _legacy_controller: 'AdminPzFeaturedCategories'
+
+admin_pz_featured_categories_edit:
+  path: /pz-featured-categories/edit/{itemId}
+  methods: [GET]
+  defaults:
+    _controller: 'PrestaZone\FeaturedCategories\Controller\Admin\FeaturedCategoryController::editAction'
+    _legacy_controller: 'AdminPzFeaturedCategories'
+  requirements:
+    itemId: '\\d+'
+
+admin_pz_featured_categories_save:
+  path: /pz-featured-categories/save
+  methods: [POST]
+  defaults:
+    _controller: 'PrestaZone\FeaturedCategories\Controller\Admin\FeaturedCategoryController::saveAction'
+    _legacy_controller: 'AdminPzFeaturedCategories'
+
+admin_pz_featured_categories_delete:
+  path: /pz-featured-categories/delete/{itemId}
+  methods: [POST]
+  defaults:
+    _controller: 'PrestaZone\FeaturedCategories\Controller\Admin\FeaturedCategoryController::deleteAction'
+    _legacy_controller: 'AdminPzFeaturedCategories'
+  requirements:
+    itemId: '\\d+'
+
+admin_pz_featured_categories_toggle:
+  path: /pz-featured-categories/toggle/{itemId}
+  methods: [POST]
+  defaults:
+    _controller: 'PrestaZone\FeaturedCategories\Controller\Admin\FeaturedCategoryController::toggleAction'
+    _legacy_controller: 'AdminPzFeaturedCategories'
+  requirements:
+    itemId: '\\d+'
+
+admin_pz_featured_categories_reorder:
+  path: /pz-featured-categories/reorder
+  methods: [POST]
+  defaults:
+    _controller: 'PrestaZone\FeaturedCategories\Controller\Admin\FeaturedCategoryController::reorderAction'
+    _legacy_controller: 'AdminPzFeaturedCategories'
