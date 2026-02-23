@@ -4,6 +4,7 @@
   border-radius: 6px;
   box-shadow: 0px 1px 2px 0px #00000014;
   margin: 0;
+  height: fit-content;
 }
 
 .pz-categorytree .pz-categorytree__main-list,
@@ -77,6 +78,12 @@
   margin: 0;
   color: #6c757d;
   font-size: 0.875rem;
+}
+
+@media (max-width: 1023.98px) {
+  .pz-categorytree {
+    display: none;
+  }
 }
 
 @media (max-width: 767.98px) {
