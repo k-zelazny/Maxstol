@@ -1,6 +1,6 @@
 <?php
 /**
- * 2025 PrestaZone
+ * 2026 PrestaZone
  *
  * NOTICE OF LICENSE
  *
@@ -19,7 +19,7 @@
  * of this module.
  *
  * @author    PrestaZone <modules@prestazone.pl>
- * @copyright 2025 PrestaZone
+ * @copyright 2026 PrestaZone
  * @license   Paid license for a single domain, contact: <modules@prestazone.pl>
  */
 header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');

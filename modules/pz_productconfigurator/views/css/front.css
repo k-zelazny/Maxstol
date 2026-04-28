@@ -550,7 +550,6 @@
   line-height: 20px;
   font-weight: 400;
   color: #ce2b2d;
-  min-height: 0;
 }
 
 #product .product__configurator--module .config-option--text .config-option__impact:not(.is-visible) {
@@ -704,7 +703,6 @@
 }
 
 #product .product__configurator--module .config-option--none .config-option__card {
-  min-height: auto;
   align-items: flex-start;
   justify-content: flex-start;
   padding: 12px 14px;
@@ -793,7 +791,6 @@
   }
 
   #product .product__configurator--module .config-option--text .config-option__card {
-    min-height: 94px;
     padding: 10px 10px 10px 38px;
   }
 
@@ -827,18 +824,47 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  #product .product__configurator--module .config-group__options--image[data-image-columns] {
+  #product .product__configurator--module .config-group__options--image[data-image-columns="6"],
+  #product .product__configurator--module .config-group__options--image:not([data-image-columns]) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  #product .product__configurator--module .config-group__options--image[data-image-columns="4"] {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  #product .product__configurator--module .config-option--image .config-option__preview {
-    height: 110px;
+  #product .product__configurator--module .config-group__options--image[data-image-columns="6"] .config-option__preview,
+  #product .product__configurator--module .config-group__options--image:not([data-image-columns]) .config-option__preview {
+    aspect-ratio: 1 / 1;
+    height: auto;
+  }
+
+  #product .product__configurator--module .config-group__options--image[data-image-columns="4"] .config-option__preview {
+    aspect-ratio: 4 / 3;
+    height: auto;
+  }
+
+  #product .product__configurator--module .config-group__options--image[data-image-columns="6"] .config-option--image .config-option__preview::after,
+  #product .product__configurator--module .config-group__options--image:not([data-image-columns]) .config-option--image .config-option__preview::after {
+    width: 30px;
+    height: 30px;
+    top: 6px;
+    right: 6px;
+    background-size: 16px 16px;
   }
 
   #product .product__configurator--module .configurator-summary {
     padding: 12px;
   }
 
+}
+
+@media (max-width: 479.98px) {
+  #product .product__configurator--module .config-group__options--image[data-image-columns="6"],
+  #product .product__configurator--module .config-group__options--image:not([data-image-columns]) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 /* Failsafe when configurator renders outside `#product`. */

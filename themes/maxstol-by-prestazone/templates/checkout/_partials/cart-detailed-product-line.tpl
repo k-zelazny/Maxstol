@@ -161,7 +161,7 @@
     {if $smarty.capture.customization_points|trim neq ''}
       <div class="product-line__content-customizations">
         <div class="product-line__content-customizations-title">
-          {l s='Configuration' d='Maxstol.Theme.Cart'}:
+          {l s='Configuration' d='Shop.Theme.Checkout'}:
         </div>
         <ul class="product-line__customization-list">
           {$smarty.capture.customization_points nofilter}
