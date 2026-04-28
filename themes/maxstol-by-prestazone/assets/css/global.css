@@ -48,6 +48,14 @@ a {
   transition: color .3s ease-in-out;
 }
 
+.modal {
+  z-index: 2000;
+}
+
+.modal-backdrop {
+  z-index: 1950;
+}
+
 @media (max-width: 991.98px) {
   :root {
     font-size: 14px;
@@ -236,6 +244,7 @@ h5, .h5 {
 
 .btn-primary:disabled {
   background-color: var(--color-red-400);
+  color: var(--color-white);
 }
 
 .btn-secondary {
@@ -275,6 +284,32 @@ h5, .h5 {
   line-height: 150% !important;
   color: var(--color-gray-900);
   cursor: pointer;
+}
+
+.btn-outline-primary {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 140%;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: 1px solid var(--color-red-400) !important;
+  color: var(--color-red-400);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.btn-outline-primary:hover, 
+.btn-outline-primary:active, 
+.btn-outline-primary:focus-visible {
+  background-color: var(--color-red-400) !important;
+  color: var(--color-white);
+}
+
+.btn-outline-primary:disabled {
+  color: var(--color-red-400);
 }
 /* END Buttons */
 

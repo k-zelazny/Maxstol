@@ -1,0 +1,10 @@
+{
+  "name": "prestazone/pz_productconfigurator",
+  "description": "Hybrid product configurator for PrestaShop products based on rules and option groups.",
+  "version": "1.0.0",
+  "autoload": {
+    "psr-4": {
+      "PrestaZone\\ProductConfigurator\\": "src/"
+    }
+  }
+}

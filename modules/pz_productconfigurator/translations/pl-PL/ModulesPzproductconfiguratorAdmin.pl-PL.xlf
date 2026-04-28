@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="ModulesPzproductconfiguratorAdmin.xlf" source-language="pl-PL" target-language="pl-PL" datatype="plaintext">
+    <body>
+      <trans-unit id="f193ce93d017890f50cc10d825657f43">
+        <source>Product Configurator</source>
+        <target>Konfigurator produktu</target>
+      </trans-unit>
+      <trans-unit id="99639525255ef35fd8abf508613e13df">
+        <source>Adds a hybrid product configurator based on rules and option groups instead of generating every possible combination.</source>
+        <target>Dodaje hybrydowy konfigurator produktu oparty na regułach i grupach opcji, zamiast generowania każdej możliwej kombinacji.</target>
+      </trans-unit>
+      <trans-unit id="9851adcbf8570b7c667d1a99d541b29b">
+        <source>Add group</source>
+        <target>Dodaj grupę</target>
+      </trans-unit>
+      <trans-unit id="0b325df972db7e369c4bb70b3dd98d60">
+        <source>Configure the schema directly on each product card. Native combinations should be limited to dimensions or stock-driven attributes; the remaining options can live in this module.</source>
+        <target>Konfiguruj schemat bezpośrednio na karcie produktu. Natywne kombinacje ogranicz do wymiarów lub atrybutów magazynowych, a pozostałe opcje obsłuż w tym module.</target>
+      </trans-unit>
+      <trans-unit id="23682ad11e062879a37272dce2948fa5">
+        <source>Clear configuration</source>
+        <target>Wyczyść konfigurację</target>
+      </trans-unit>
+      <trans-unit id="c198293d3e5e11e639bc94d5fc4e8090">
+        <source>Could not create module tables.</source>
+        <target>Nie udało się utworzyć tabel modułu.</target>
+      </trans-unit>
+      <trans-unit id="b653f597f1c15b61de59fb9633d874f0">
+        <source>Could not remove module tables.</source>
+        <target>Nie udało się usunąć tabel modułu.</target>
+      </trans-unit>
+      <trans-unit id="eb16aef041c82dd79f387f20e4f4cae8">
+        <source>Enable configurator for this product</source>
+        <target>Włącz konfigurator dla tego produktu</target>
+      </trans-unit>
+      <trans-unit id="efc2524742e0d86962e5a051499e7bb2">
+        <source>Use the visual editor below to add groups like colors, barriers, drawers, slats or mattress options.</source>
+        <target>Użyj poniższego edytora wizualnego, aby dodać grupy takie jak kolory, barierki, szuflady, stelaże lub opcje materaca.</target>
+      </trans-unit>
+      <trans-unit id="dc0c6bf0b0c1a0643db0ba17ae5165f8">
+        <source>The raw JSON stays available only as an advanced fallback. Native combinations should still be limited to stock-driven options like size.</source>
+        <target>Surowy JSON pozostaje dostępny wyłącznie jako zaawansowana opcja awaryjna. Natywne kombinacje nadal powinny być ograniczone do opcji zależnych od stanów magazynowych, takich jak rozmiar.</target>
+      </trans-unit>
+      <trans-unit id="c5f14fc2e1d149c979d94b31ac174cbe">
+        <source>Last validation issue:</source>
+        <target>Ostatni błąd walidacji:</target>
+      </trans-unit>
+      <trans-unit id="51ec8c8172afe20720c2eff4e36f6bfd">
+        <source>Load sample data</source>
+        <target>Wczytaj przykładowe dane</target>
+      </trans-unit>
+      <trans-unit id="63fad223ff98d60a6027993d1e224648">
+        <source>Move group up</source>
+        <target>Przenieś wyżej</target>
+      </trans-unit>
+      <trans-unit id="7cca3548328c193fba1dfa23b096c4bc">
+        <source>Move group down</source>
+        <target>Przenieś niżej</target>
+      </trans-unit>
+      <trans-unit id="53fc0cb1e646cdeec90d530844959c15">
+        <source>Remove group</source>
+        <target>Usuń grupę</target>
+      </trans-unit>
+      <trans-unit id="fde47b9937719a79156c8e0dae2ab3f1">
+        <source>Group count</source>
+        <target>Liczba grup</target>
+      </trans-unit>
+      <trans-unit id="481e160ce2075de99f1adcb8fe6c24aa">
+        <source>Configurator editor</source>
+        <target>Edytor konfiguratora</target>
+      </trans-unit>
+      <trans-unit id="12d2f3eff7aaad8f7aa0f21b94408f3b">
+        <source>Move option up</source>
+        <target>Przenieś opcję wyżej</target>
+      </trans-unit>
+      <trans-unit id="78db19c9e936a73cf66accec4f37bb76">
+        <source>Move option down</source>
+        <target>Przenieś opcję niżej</target>
+      </trans-unit>
+      <trans-unit id="362626c4aef69753487093eb68813f94">
+        <source>Remove option</source>
+        <target>Usuń opcję</target>
+      </trans-unit>
+      <trans-unit id="818008cb0380e36fe7d4864c47b94b45">
+        <source>Add option</source>
+        <target>Dodaj opcję</target>
+      </trans-unit>
+      <trans-unit id="1d51f5bbdda3bbe84fc2ed78c22ad3ad">
+        <source>No groups have been added yet. Start with "%s".</source>
+        <target>Nie dodano jeszcze żadnej grupy. Zacznij od przycisku "%s".</target>
+      </trans-unit>
+      <trans-unit id="31de06b9c229104d038e1530faa46bdd">
+        <source>Option name</source>
+        <target>Nazwa opcji</target>
+      </trans-unit>
+      <trans-unit id="6b8c265d178a600be31a4b1ee600a087">
+        <source>Short description (shown on info icon hover)</source>
+        <target>Krótki opis (pokazywany po najechaniu na ikonę info)</target>
+      </trans-unit>
+      <trans-unit id="70a2468998d90207df5ed8727c31e7b2">
+        <source>Surcharge</source>
+        <target>Dopłata</target>
+      </trans-unit>
+      <trans-unit id="b4ccdd6f7ac370bbeea9cdb36338ae69">
+        <source>HEX color</source>
+        <target>Kolor HEX</target>
+      </trans-unit>
+      <trans-unit id="18d74660dc90137de095bbcdf3060fda">
+        <source>Texture URL (optional)</source>
+        <target>Obraz tekstury (opcjonalnie)</target>
+      </trans-unit>
+      <trans-unit id="427b6d816d7fdd86cabe48d8180a3cc9">
+        <source>Image URL</source>
+        <target>Obraz opcji</target>
+      </trans-unit>
+      <trans-unit id="0ff5840c17a19a6416cb6532fa1cd3c9">
+        <source>Upload image</source>
+        <target>Wgraj obraz</target>
+      </trans-unit>
+      <trans-unit id="8c38cf08a0d0a01bd44c682479432350">
+        <source>Change image</source>
+        <target>Zmień obraz</target>
+      </trans-unit>
+      <trans-unit id="f4701af4852c350444ecdca3fe3ecfc5">
+        <source>Remove image</source>
+        <target>Usuń obraz</target>
+      </trans-unit>
+      <trans-unit id="a3619be17de7bf5c002f7f7df8103724">
+        <source>Selected image preview</source>
+        <target>Podgląd wybranego obrazu</target>
+      </trans-unit>
+      <trans-unit id="a11f82d790c6edb543073864475b2745">
+        <source>Selected by default</source>
+        <target>Domyślnie zaznaczona</target>
+      </trans-unit>
+      <trans-unit id="c6155aaecccf794cd2a00fcc35898022">
+        <source>Group name</source>
+        <target>Nazwa grupy</target>
+      </trans-unit>
+      <trans-unit id="e73d898f8a50f7ed1a1aee53ce9160f2">
+        <source>Front presentation</source>
+        <target>Wygląd na froncie</target>
+      </trans-unit>
+      <trans-unit id="8262ccb9e9ff0ba052ad091720fe2815">
+        <source>Text tiles</source>
+        <target>Kafelki tekstowe</target>
+      </trans-unit>
+      <trans-unit id="c0fa3292db28914ada880ede0d16ed67">
+        <source>Color swatches</source>
+        <target>Próbki kolorów</target>
+      </trans-unit>
+      <trans-unit id="85d1f5d4cfc0b80869f8123d7b3ecb61">
+        <source>Image tiles</source>
+        <target>Kafelki ze zdjęciem</target>
+      </trans-unit>
+      <trans-unit id="4f6d80f93d8ba2723714578a2e97bfd4">
+        <source>Tiles per row (image groups)</source>
+        <target>Kafelków w rzędzie (grupy obrazkowe)</target>
+      </trans-unit>
+      <trans-unit id="969cc2be17cda141a47445baab29d142">
+        <source>Selection required</source>
+        <target>Wymagany wybór</target>
+      </trans-unit>
+      <trans-unit id="4569ddfd74a24f1fb1c8db818187e311">
+        <source>No-option label</source>
+        <target>Etykieta "brak opcji"</target>
+      </trans-unit>
+      <trans-unit id="2bc91d04866914fce4239e44d260097a">
+        <source>Show this group only when (source group)</source>
+        <target>Pokaż tę grupę tylko gdy (grupa źródłowa)</target>
+      </trans-unit>
+      <trans-unit id="61c1338f7420d3e3f5caed57bde7a044">
+        <source>Condition option</source>
+        <target>Opcja warunku</target>
+      </trans-unit>
+      <trans-unit id="8eabded2b5d526a6654db001151e6fe2">
+        <source>Any selected option in source group</source>
+        <target>Dowolna wybrana opcja w grupie źródłowej</target>
+      </trans-unit>
+      <trans-unit id="473997568b876231208b0213de9bc96a">
+        <source>No option selected in source group</source>
+        <target>Brak wybranej opcji w grupie źródłowej</target>
+      </trans-unit>
+      <trans-unit id="1f459ba7dee3dd03fddbb95d68326028">
+        <source>Always visible (no dependency)</source>
+        <target>Zawsze widoczna (brak zależności)</target>
+      </trans-unit>
+      <trans-unit id="3ace726db53c7647f2a59f74be4db176">
+        <source>Group options</source>
+        <target>Opcje w grupie</target>
+      </trans-unit>
+      <trans-unit id="7e3c3540963757981a8fe9a816a03b4c">
+        <source>Configurator has saved groups but is disabled. Enable it before saving the product.</source>
+        <target>Konfigurator ma zapisane grupy, ale jest wyłączony. Włącz go przed zapisaniem produktu.</target>
+      </trans-unit>
+      <trans-unit id="67b5eb44245cfeefa8b008a031981cff">
+        <source>Enable configurator</source>
+        <target>Włącz konfigurator</target>
+      </trans-unit>
+      <trans-unit id="dc7cc0337451c100f7524f2ce9eb94c4">
+        <source>Could not parse previous JSON. You can rebuild from this editor, but saving will overwrite old technical data.</source>
+        <target>Nie udało się odczytać poprzedniego JSON-a. Możesz odbudować konfigurator z tego edytora, ale zapis nadpisze stare dane techniczne.</target>
+      </trans-unit>
+      <trans-unit id="d2e96bdea6c6b5c264ecdb7cd0665a85">
+        <source>Show technical JSON data</source>
+        <target>Pokaż dane techniczne JSON</target>
+      </trans-unit>
+      <trans-unit id="93343a0804b7fba14856d971e908b963">
+        <source>Group %d</source>
+        <target>Grupa %d</target>
+      </trans-unit>
+      <trans-unit id="b9ea9a149766058ca8407e7bd1a6626c">
+        <source>Option %d</source>
+        <target>Opcja %d</target>
+      </trans-unit>
+      <trans-unit id="5b3d69298c328dc9c0b4e68fc21edb46">
+        <source>No extra option</source>
+        <target>Brak dodatkowej opcji</target>
+      </trans-unit>
+      <trans-unit id="142fcf583963e0bc9cfa384b76aecdb9">
+        <source>Invalid JSON syntax.</source>
+        <target>Nieprawidłowa składnia JSON.</target>
+      </trans-unit>
+      <trans-unit id="a6d48eb89d9252ed9e058a35c0e1b05b">
+        <source>Configurator schema must decode to a JSON object.</source>
+        <target>Schemat konfiguratora musi się dekodować do obiektu JSON.</target>
+      </trans-unit>
+      <trans-unit id="748d30c109fbb2e6624e64fda5f3d986">
+        <source>Normalized schema could not be encoded back to JSON.</source>
+        <target>Nie udało się ponownie zakodować znormalizowanego schematu do JSON.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

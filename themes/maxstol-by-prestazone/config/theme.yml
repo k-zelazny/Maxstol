@@ -8,7 +8,7 @@ author:
   url: "https://prestazone.pl"
 
 assets:
-  use_parent_assets: false
+  use_parent_assets: true
   css:
     all:
       # Libraries
@@ -48,6 +48,9 @@ assets:
     index:
       - id: index
         path: assets/js/index.js
+    product:
+      - id: product
+        path: assets/js/product.js
     cart:
       - id: cart
         path: assets/js/cart.js
@@ -68,6 +71,10 @@ global_settings:
       - ps_banner
       - ps_newproducts
       - ps_bestsellers
+      - pz_categorytree
+      - pz_orderconfirmation
+      - pz_productextrafields
+      - pz_productconfigurator
   hooks:
     modules_to_hook:
       displayNav1:
@@ -101,6 +108,10 @@ global_settings:
         - ps_contactinfo
       displayContactRightColumn:
         - contactform
+      displayFooterProduct:
+        - ps_featuredproducts
+      displayProductAdditionalInfo:
+        - #
 
   image_types:
     cart_default:
@@ -170,6 +181,7 @@ global_settings:
 
 
 theme_settings:
+  core_scripts: true
   rtl_generation: false
   default_layout: layout-full-width
   layouts:

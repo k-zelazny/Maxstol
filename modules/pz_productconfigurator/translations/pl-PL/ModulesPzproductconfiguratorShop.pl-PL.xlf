@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="ModulesPzproductconfiguratorShop.xlf" source-language="pl-PL" target-language="pl-PL" datatype="plaintext">
+    <body>
+      <trans-unit id="5b3d69298c328dc9c0b4e68fc21edb46">
+        <source>No extra option</source>
+        <target>Brak dodatkowej opcji</target>
+      </trans-unit>
+      <trans-unit id="dc1b2d5d882c89d54785a225b3cb4686">
+        <source>Choose option</source>
+        <target>Wybierz opcję</target>
+      </trans-unit>
+      <trans-unit id="33bb60f9f62836e789d2d9510bde38cb">
+        <source>Configurator surcharge</source>
+        <target>Dopłata konfiguratora</target>
+      </trans-unit>
+      <trans-unit id="077e9523b400a3e06f88d0059020898b">
+        <source>Reset selection</source>
+        <target>Resetuj wybór</target>
+      </trans-unit>
+      <trans-unit id="7a178abc387ad5f0af6af7848f7aef15">
+        <source>Could not save configurator selection. Try again.</source>
+        <target>Nie udało się zapisać konfiguracji. Spróbuj ponownie.</target>
+      </trans-unit>
+      <trans-unit id="d588449fae27d9ec42251b22feca3ef2">
+        <source>Session expired. Refresh the page and try again.</source>
+        <target>Sesja wygasła. Odśwież stronę i spróbuj ponownie.</target>
+      </trans-unit>
+      <trans-unit id="1fe07c45b9d57c4d25b636aaaa49b684">
+        <source>Product could not be resolved.</source>
+        <target>Nie udało się ustalić produktu.</target>
+      </trans-unit>
+      <trans-unit id="b669f9d8a52fb417c4d8c0ec7e57f005">
+        <source>Cart could not be initialized.</source>
+        <target>Nie udało się zainicjować koszyka.</target>
+      </trans-unit>
+      <trans-unit id="d0d28bd1440986344be18b69371b53c8">
+        <source>Product configuration</source>
+        <target>Konfiguracja produktu</target>
+      </trans-unit>
+      <trans-unit id="254f642527b45bc260048e30704edb39">
+        <source>Configuration</source>
+        <target>Wybrane warianty</target>
+      </trans-unit>
+      <trans-unit id="bcb0100b5f062e7f8dedab4a96b92fe8">
+        <source>Could not save configurator selection.</source>
+        <target>Nie udało się zapisać konfiguracji.</target>
+      </trans-unit>
+      <trans-unit id="a3bfce809462820a537c3ee2d4ae26fe">
+        <source>Choose an option in the required group: %s</source>
+        <target>Wybierz opcję w wymaganej grupie: %s</target>
+      </trans-unit>
+      <trans-unit id="783384c7f230463c4b375dd650d3bf5c">
+        <source>Configurator for this product is unavailable.</source>
+        <target>Konfigurator dla tego produktu jest niedostępny.</target>
+      </trans-unit>
+      <trans-unit id="4bd2f562079cc26b72a696e222695f29">
+        <source>Configurator selection is invalid. Refresh the page and try again.</source>
+        <target>Wybrana konfiguracja jest nieprawidłowa. Odśwież stronę i spróbuj ponownie.</target>
+      </trans-unit>
+      <trans-unit id="ab066b3292d8ab61ef3b5c77169cdd19">
+        <source>More information</source>
+        <target>Więcej informacji</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

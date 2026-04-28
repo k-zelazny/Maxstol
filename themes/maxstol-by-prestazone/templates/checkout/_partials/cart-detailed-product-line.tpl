@@ -131,6 +131,43 @@
         </div>
       </div>
     {/if}
+
+    {capture name='customization_points'}
+      {if is_array($product.customizations)}
+        {foreach from=$product.customizations item="customization"}
+          {if isset($customization.fields) && is_array($customization.fields)}
+            {foreach from=$customization.fields item="field"}
+              {if $field.type == 'text'}
+                {if $field.id_module|intval}
+                  {assign var=customization_text value=$field.text|strip_tags}
+                {else}
+                  {assign var=customization_text value=$field.text}
+                {/if}
+
+                {assign var=customization_lines value=$customization_text|replace:"\r\n":"\n"|replace:"\r":"\n"|replace:" | ":"\n"|replace:"|":"\n"}
+                {foreach from="\n"|explode:$customization_lines item="config_line"}
+                  {assign var=config_line value=$config_line|trim}
+                  {if $config_line neq ''}
+                    <li>{$config_line|escape:'htmlall':'UTF-8'|regex_replace:"/^([^:]+):[[:space:]]*(.*?)([[:space:]]-[[:space:]][-+]?\\d[\\d\\s,.]*[[:space:]]*\\S+)?$/u":"$1: <b>$2</b>$3" nofilter}</li>
+                  {/if}
+                {/foreach}
+              {/if}
+            {/foreach}
+          {/if}
+        {/foreach}
+      {/if}
+    {/capture}
+
+    {if $smarty.capture.customization_points|trim neq ''}
+      <div class="product-line__content-customizations">
+        <div class="product-line__content-customizations-title">
+          {l s='Configuration' d='Maxstol.Theme.Cart'}:
+        </div>
+        <ul class="product-line__customization-list">
+          {$smarty.capture.customization_points nofilter}
+        </ul>
+      </div>
+    {/if}
     
     <div class="product-line__content-price">
       {if !empty($product.is_gift)}

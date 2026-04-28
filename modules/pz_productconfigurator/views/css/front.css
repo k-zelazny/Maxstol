@@ -1,0 +1,868 @@
+#product .product__configurator--module {
+  margin-block-start: 130px;
+  margin-block-end: 60px;
+}
+
+/* Shared base styles for native and module configurators. */
+#product .product__configurator.js-product-variants,
+#product .product__configurator.product__configurator--module {
+  border-top: 1px solid var(--color-gray-200);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Native variant configurator spacing. */
+#product .product__configurator.js-product-variants {
+  margin-block: 130px;
+}
+
+#product .product__configurator.js-product-variants .config-group__summary,
+#product .product__configurator.product__configurator--module .config-group__summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  border-bottom: 1px solid var(--color-gray-200);
+  font-size: 0.9375rem;
+}
+
+#product .product__configurator.js-product-variants .config-group[open] .config-group__summary,
+#product .product__configurator.product__configurator--module .config-group[open] .config-group__summary {
+  border-bottom-color: var(--color-gray-200);
+}
+
+#product .product__configurator.js-product-variants .config-group__summary::after,
+#product .product__configurator.product__configurator--module .config-group__summary::after {
+  content: '';
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1055_12)'%3E%3Cpath d='M1.67847 3.01226C1.96453 3.01232 2.23886 3.1175 2.44111 3.30468L5.99326 6.59106L9.54541 3.30468C9.64491 3.20936 9.76394 3.13333 9.89555 3.08102C10.0272 3.02872 10.1687 3.00119 10.3119 3.00004C10.4552 2.99889 10.5972 3.02414 10.7298 3.07432C10.8623 3.1245 10.9828 3.1986 11.0841 3.29231C11.1853 3.38601 11.2654 3.49744 11.3197 3.62009C11.3739 3.74274 11.4012 3.87415 11.4 4.00666C11.3987 4.13918 11.369 4.27013 11.3124 4.39189C11.2559 4.51365 11.1737 4.62377 11.0707 4.71584L6.7559 8.7078C6.55361 8.8949 6.27929 9 5.99326 9C5.70723 9 5.4329 8.8949 5.23062 8.7078L0.915827 4.71584C0.765015 4.57627 0.662317 4.39846 0.620714 4.2049C0.579112 4.01133 0.600473 3.8107 0.682098 3.62837C0.763723 3.44604 0.901947 3.29019 1.0793 3.18052C1.25664 3.07086 1.46515 3.01231 1.67847 3.01226Z' fill='%23111928'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1055_12'%3E%3Crect width='12' height='12' fill='white' transform='translate(12 12) rotate(180)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+  background-size: 100% 100%;
+  transition: transform .3s ease-in-out;
+  display: block;
+  margin-left: 10px;
+  flex-shrink: 0;
+}
+
+#product .product__configurator.js-product-variants .config-group[open] .config-group__summary::after,
+#product .product__configurator.product__configurator--module .config-group[open] .config-group__summary::after {
+  transform: rotate(-180deg);
+}
+
+#product .product__configurator.js-product-variants .config-group__summary::-webkit-details-marker,
+#product .product__configurator.product__configurator--module .config-group__summary::-webkit-details-marker {
+  display: none;
+}
+
+#product .product__configurator.js-product-variants .config-group__title,
+#product .product__configurator.product__configurator--module .config-group__title {
+  font-size: 1.0625rem;
+  font-weight: 500;
+  color: var(--color-gray-900);
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+#product .product__configurator.js-product-variants .config-group__value,
+#product .product__configurator.product__configurator--module .config-group__value {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 8px;
+  border: 1px solid #d6deea;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 1rem;
+  color: var(--color-gray-700);
+  line-height: 1.2;
+  text-align: right;
+  white-space: nowrap;
+  max-width: 56%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: auto;
+}
+
+#product .product__configurator.js-product-variants .config-group__value-thumb,
+#product .product__configurator.product__configurator--module .config-group__value-thumb {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  border-radius: 4px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#product .product__configurator.js-product-variants .config-group__value-label,
+#product .product__configurator.product__configurator--module .config-group__value-label {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #0f172a;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#product .product__configurator.js-product-variants .config-group__value-impact,
+#product .product__configurator.product__configurator--module .config-group__value-impact {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #ce2b2d;
+}
+
+#product .product__configurator.js-product-variants .config-group[open] .config-group__value,
+#product .product__configurator.product__configurator--module .config-group[open] .config-group__value {
+  display: none;
+}
+
+#product .product__configurator.js-product-variants .config-group__options,
+#product .product__configurator.product__configurator--module .config-group__options {
+  display: grid;
+  gap: 24px;
+  padding: 20px;
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+#product .product__configurator.js-product-variants .config-group__options--text,
+#product .product__configurator.product__configurator--module .config-group__options--text {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+#product .product__configurator.js-product-variants .config-group__options--color,
+#product .product__configurator.product__configurator--module .config-group__options--color {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+#product .product__configurator.js-product-variants .config-group__options--image,
+#product .product__configurator.product__configurator--module .config-group__options--image {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+#product .product__configurator.js-product-variants .config-option,
+#product .product__configurator.product__configurator--module .config-option {
+  margin: 0;
+  cursor: pointer;
+}
+
+#product .product__configurator.js-product-variants .config-option > input,
+#product .product__configurator.product__configurator--module .config-option > input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#product .product__configurator.js-product-variants .config-option__card,
+#product .product__configurator.product__configurator--module .config-option__card {
+  border: 1px solid var(--color-gray-200);
+  border-radius: 6px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  transition: border-color .2s ease, box-shadow .2s ease;
+  height: 100%;
+}
+
+#product .product__configurator.js-product-variants .config-option--text .config-option__card,
+#product .product__configurator.product__configurator--module .config-option--text .config-option__card {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+#product .product__configurator.js-product-variants .config-option:hover .config-option__card,
+#product .product__configurator.product__configurator--module .config-option:hover .config-option__card {
+  border-color: #e2b2b3;
+}
+
+#product .product__configurator.js-product-variants .config-option.is-selected .config-option__card,
+#product .product__configurator.product__configurator--module .config-option.is-selected .config-option__card {
+  border-color: var(--color-red-400);
+  box-shadow: 0 0 0 1px rgba(206, 43, 45, 0.15);
+}
+
+#product .product__configurator.js-product-variants .config-option__preview,
+#product .product__configurator.product__configurator--module .config-option__preview {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#product .product__configurator.js-product-variants .config-option__swatch,
+#product .product__configurator.product__configurator--module .config-option__swatch {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#product .product__configurator.js-product-variants .config-option__swatch--texture,
+#product .product__configurator.product__configurator--module .config-option__swatch--texture {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#product .product__configurator.js-product-variants .config-option__meta,
+#product .product__configurator.product__configurator--module .config-option__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+#product .product__configurator.js-product-variants .config-option__name-wrap,
+#product .product__configurator.product__configurator--module .config-option__name-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#product .product__configurator.js-product-variants .config-group--image .config-option__name-wrap,
+#product .product__configurator.product__configurator--module .config-group--image .config-option__name-wrap {
+  justify-content: center;
+}
+
+#product .product__configurator.js-product-variants .config-option__name,
+#product .product__configurator.product__configurator--module .config-option__name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-gray-900);
+}
+
+#product .product__configurator.js-product-variants .config-group--image .config-option__name,
+#product .product__configurator.product__configurator--module .config-group--image .config-option__name {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+#product .product__configurator.js-product-variants .config-option__impact,
+#product .product__configurator.product__configurator--module .config-option__impact {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-red-400);
+}
+
+#product .product__configurator.js-product-variants .config-group--image .config-option__impact,
+#product .product__configurator.product__configurator--module .config-group--image .config-option__impact {
+  text-align: center;
+}
+
+#product .product__configurator.js-product-variants .config-option__impact:not(.is-visible),
+#product .product__configurator.product__configurator--module .config-option__impact:not(.is-visible) {
+  opacity: 0;
+}
+
+@media (max-width: 767.98px) {
+  #product .product__configurator.js-product-variants {
+    margin-block: 20px;
+  }
+
+  #product .product__configurator.js-product-variants .config-group__summary,
+#product .product__configurator.product__configurator--module .config-group__summary {
+    padding: 12px;
+  }
+
+  #product .product__configurator.js-product-variants .config-group__options,
+#product .product__configurator.product__configurator--module .config-group__options {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  #product .product__configurator.js-product-variants .config-group__options--text,
+#product .product__configurator.product__configurator--module .config-group__options--text {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #product .product__configurator.js-product-variants .config-group__options--color,
+#product .product__configurator.product__configurator--module .config-group__options--color {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+#product .product-actions__buttons {
+  margin-block-end: 130px;
+}
+
+#product .product__configurator--module .config-option {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  appearance: none;
+}
+
+#product .product__configurator--module .config-option__card {
+  width: 100%;
+}
+
+#product .product__configurator--module .config-option__name-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  max-width: 100%;
+  overflow: visible;
+}
+
+#product .product__configurator--module .config-option__info {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  line-height: 1;
+  cursor: help;
+  position: relative;
+  overflow: visible;
+  z-index: 3;
+}
+
+#product .product__configurator--module .config-option__info svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+#product .product__configurator--module .config-option__info::before,
+#product .product__configurator--module .config-option__info::after {
+  content: none;
+}
+
+.pzpc-floating-tooltip {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: max-content;
+  max-width: 320px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: #1f2937;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.35;
+  white-space: normal;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.26);
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.pzpc-floating-tooltip::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #1f2937;
+}
+
+.pzpc-floating-tooltip.pzpc-floating-tooltip--bottom::after {
+  top: auto;
+  bottom: 100%;
+  border-top: 0;
+  border-bottom: 6px solid #1f2937;
+}
+
+#product .product__configurator--module .config-group__summary {
+  padding: 18px 16px;
+}
+
+#product .product__configurator--module .config-group__none {
+  padding: 16px 26px 0;
+}
+
+#product .product__configurator--module .config-none-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  user-select: none;
+}
+
+#product .product__configurator--module .config-group__none .config-none-toggle > input[type="radio"] {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  overflow: hidden !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+}
+
+#product .product__configurator--module .config-none-toggle__box {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #c5cfde;
+  border-radius: 6px;
+  background: #fff;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+#product .product__configurator--module .config-none-toggle__box::after {
+  content: '';
+  width: 6px;
+  height: 11px;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+#product .product__configurator--module .config-none-toggle__box svg {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+#product .product__configurator--module .config-none-toggle__label {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #2a2f3a;
+}
+
+#product .product__configurator--module .config-none-toggle.is-selected .config-none-toggle__box,
+#product .product__configurator--module .config-none-toggle > input:checked + .config-none-toggle__box {
+  background: #0f1a3d;
+  border-color: #0f1a3d;
+}
+
+#product .product__configurator--module .config-none-toggle.is-selected .config-none-toggle__box svg,
+#product .product__configurator--module .config-none-toggle > input:checked + .config-none-toggle__box svg {
+  opacity: 1;
+  transform: scale(1);
+}
+
+#product .product__configurator--module .config-none-toggle.is-selected .config-none-toggle__box::after,
+#product .product__configurator--module .config-none-toggle > input:checked + .config-none-toggle__box::after {
+  opacity: 1;
+}
+
+#product .product__configurator--module .config-group__none + .config-group__options {
+  padding-top: 18px;
+}
+
+#product .product__configurator--module .config-group__options--text {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 26px 30px;
+  padding: 26px 26px 14px;
+}
+
+#product .product__configurator--module .config-option--text .config-option__card {
+  border-color: #b9c8da;
+  border-radius: 8px;
+  background: #fff;
+  padding: 10px 12px 12px 42px;
+  position: relative;
+  align-items: flex-start;
+  justify-content: flex-start;
+  overflow: visible;
+}
+
+#product .product__configurator--module .config-option--text .config-option__checkbox {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  transform: translateY(-50%);
+  border: 1px solid #d1d5db;
+  border-radius: 100%;
+  background: #f0fafb;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+#product .product__configurator--module .config-option--text .config-option__checkbox::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 4px;
+  height: 8px;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+#product .product__configurator--module .config-option--text.is-selected .config-option__checkbox,
+#product .product__configurator--module .config-option--text > input:checked + .config-option__card .config-option__checkbox {
+  border-color: #0f1a3d;
+  background: #0f1a3d;
+}
+
+#product .product__configurator--module .config-option--text.is-selected .config-option__checkbox::after,
+#product .product__configurator--module .config-option--text > input:checked + .config-option__card .config-option__checkbox::after {
+  opacity: 1;
+}
+
+#product .product__configurator--module .config-option--text .config-option__meta {
+  width: 100%;
+  gap: 3px;
+  overflow: visible;
+}
+
+#product .product__configurator--module .config-option--text .config-option__name-wrap {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+#product .product__configurator--module .config-option--text .config-option__name {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+#product .product__configurator--module .config-option--text .config-option__impact {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #ce2b2d;
+  min-height: 0;
+}
+
+#product .product__configurator--module .config-option--text .config-option__impact:not(.is-visible) {
+  display: none;
+}
+
+#product .product__configurator--module .config-option.is-selected .config-option__card {
+  border-color: var(--color-red-400);
+  box-shadow: 0 0 0 1px rgba(206, 43, 45, 0.15);
+}
+
+#product .product__configurator--module .config-option > input:checked + .config-option__card {
+  border-color: var(--color-red-400);
+  box-shadow: 0 0 0 1px rgba(206, 43, 45, 0.15);
+}
+
+#product .product__configurator--module .config-option,
+#product .product__configurator--module .config-option__card {
+  cursor: pointer;
+}
+
+#product .product__configurator--module .config-option:focus-visible .config-option__card {
+  outline: 2px solid rgba(206, 43, 45, 0.35);
+  outline-offset: 2px;
+}
+
+#product .product__configurator--module .config-group__options--image {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+#product .product__configurator--module .config-group__options--image[data-image-columns] {
+  grid-template-columns: repeat(var(--pzpc-image-columns, 1), minmax(0, 1fr));
+}
+
+#product .product__configurator--module .config-option--image .config-option__card {
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+#product .product__configurator--module .config-option--image .config-option__meta {
+  align-items: center;
+}
+
+#product .product__configurator--module .config-option--image .config-option__name-wrap {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+  position: relative;
+}
+
+#product .product__configurator--module .config-option--image .config-option__name-wrap::after {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 100%;
+  background: #f0fafb;
+  box-sizing: border-box;
+  display: block;
+}
+
+#product .product__configurator--module .config-option--image.is-selected .config-option__name-wrap::after,
+#product .product__configurator--module .config-option--image > input:checked + .config-option__card .config-option__name-wrap::after {
+  background: #0f1a3d;
+  border-color: #0f1a3d;
+}
+
+#product .product__configurator--module .config-option--image.is-selected .config-option__name-wrap::before,
+#product .product__configurator--module .config-option--image > input:checked + .config-option__card .config-option__name-wrap::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 4px;
+  height: 8px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  bottom: 5px;
+  z-index: 1;
+}
+
+#product .product__configurator--module .config-option--image .config-option__preview {
+  width: 100%;
+  height: 132px;
+  border-radius: 6px;
+  position: relative;
+}
+
+#product .product__configurator--module .config-group__options--image[data-image-columns="6"] .config-option--image .config-option__preview,
+#product .product__configurator--module .config-group__options--image:not([data-image-columns]) .config-option--image .config-option__preview {
+  cursor: zoom-in;
+}
+
+#product .product__configurator--module .config-group__options--image[data-image-columns="6"] .config-option--image .config-option__preview::after,
+#product .product__configurator--module .config-group__options--image:not([data-image-columns]) .config-option--image .config-option__preview::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_2220_3096)'%3E%3Cpath d='M23.7068 22.2938L17.7378 16.3248C19.3644 14.3354 20.1642 11.7969 19.9716 9.23432C19.7791 6.67179 18.609 4.28129 16.7034 2.55728C14.7977 0.833269 12.3024 -0.0923492 9.73342 -0.0281174C7.16447 0.0361144 4.71849 1.08528 2.9014 2.90237C1.08431 4.71946 0.0351379 7.16545 -0.029094 9.7344C-0.0933258 12.3034 0.832293 14.7987 2.5563 16.7043C4.28031 18.61 6.67081 19.7801 9.23334 19.9726C11.7959 20.1651 14.3344 19.3654 16.3238 17.7388L22.2928 23.7078C22.4814 23.8899 22.734 23.9907 22.9962 23.9884C23.2584 23.9862 23.5092 23.881 23.6946 23.6956C23.88 23.5102 23.9852 23.2594 23.9875 22.9972C23.9897 22.735 23.8889 22.4824 23.7068 22.2938ZM9.99978 18.0008C8.41753 18.0008 6.87081 17.5316 5.55522 16.6525C4.23963 15.7735 3.21425 14.524 2.60875 13.0622C2.00324 11.6004 1.84482 9.99189 2.1535 8.44004C2.46218 6.88819 3.22411 5.46272 4.34293 4.3439C5.46175 3.22508 6.88721 2.46316 8.43906 2.15448C9.99091 1.84579 11.5994 2.00422 13.0613 2.60972C14.5231 3.21522 15.7725 4.2406 16.6515 5.5562C17.5306 6.87179 17.9998 8.41851 17.9998 10.0008C17.9974 12.1218 17.1538 14.1552 15.654 15.655C14.1542 17.1548 12.1208 17.9984 9.99978 18.0008Z' fill='white'/%3E%3Cpath d='M13 8.99999H11V7C11 6.73478 10.8946 6.48043 10.7071 6.29289C10.5196 6.10536 10.2652 6 9.99999 6C9.73478 6 9.48042 6.10536 9.29289 6.29289C9.10535 6.48043 8.99999 6.73478 8.99999 7V8.99999H7C6.73478 8.99999 6.48043 9.10535 6.29289 9.29289C6.10536 9.48042 6 9.73478 6 9.99999C6 10.2652 6.10536 10.5196 6.29289 10.7071C6.48043 10.8946 6.73478 11 7 11H8.99999V13C8.99999 13.2652 9.10535 13.5196 9.29289 13.7071C9.48042 13.8946 9.73478 14 9.99999 14C10.2652 14 10.5196 13.8946 10.7071 13.7071C10.8946 13.5196 11 13.2652 11 13V11H13C13.2652 11 13.5196 10.8946 13.7071 10.7071C13.8946 10.5196 14 10.2652 14 9.99999C14 9.73478 13.8946 9.48042 13.7071 9.29289C13.5196 9.10535 13.2652 8.99999 13 8.99999Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2220_3096'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
+  z-index: 2;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  pointer-events: none;
+}
+
+/* Image tile ratio by column count:
+   - 6 columns: square
+   - 4 columns: rectangle */
+#product .product__configurator--module .config-group__options--image:not([data-image-columns]) .config-option__preview,
+#product .product__configurator--module .config-group__options--image[data-image-columns="6"] .config-option__preview {
+  aspect-ratio: 1 / 1;
+  height: auto;
+}
+
+#product .product__configurator--module .config-group__options--image[data-image-columns="4"] .config-option__preview {
+  aspect-ratio: 4 / 3;
+  height: auto;
+}
+
+#product .product__configurator--module .config-option__preview-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+#product .product__configurator--module .config-group__options--image[data-image-columns="6"] .config-option--image .config-option__preview > .config-option__swatch,
+#product .product__configurator--module .config-group__options--image:not([data-image-columns]) .config-option--image .config-option__preview > .config-option__swatch {
+  transition: transform 0.25s ease;
+}
+
+#product .product__configurator--module .config-group__options--image[data-image-columns="6"] .config-option--image:hover .config-option__preview-image,
+#product .product__configurator--module .config-group__options--image[data-image-columns="6"] .config-option--image:hover .config-option__preview > .config-option__swatch,
+#product .product__configurator--module .config-group__options--image:not([data-image-columns]) .config-option--image:hover .config-option__preview-image,
+#product .product__configurator--module .config-group__options--image:not([data-image-columns]) .config-option--image:hover .config-option__preview > .config-option__swatch {
+  transform: scale(1.5);
+}
+
+#product .product__configurator--module .config-option--none {
+  grid-column: 1 / -1;
+}
+
+#product .product__configurator--module .config-option--none .config-option__card {
+  min-height: auto;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 12px 14px;
+}
+
+#product .product__configurator--module .configurator-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 4px;
+}
+
+#product .product__configurator--module .configurator-actions__reset {
+  border: 0;
+  background: transparent;
+  color: var(--color-gray-700);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+}
+
+#product .product__configurator--module .config-group > summary {
+  list-style: none;
+}
+
+#product .product__configurator--module .config-group > summary::-webkit-details-marker {
+  display: none;
+}
+
+#product .product__configurator--module .configurator-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1px dashed var(--color-gray-200);
+  border-radius: 12px;
+  background: #fff;
+}
+
+#product .product__configurator--module .configurator-summary__label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-gray-900);
+}
+
+#product .product__configurator--module .configurator-summary__value {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-red-400);
+}
+
+@media (max-width: 767.98px) {
+  #product .product__configurator--module .config-group__none {
+    padding: 12px 12px 0;
+  }
+
+  #product .product__configurator--module .config-none-toggle {
+    gap: 10px;
+  }
+
+  #product .product__configurator--module .config-none-toggle__box {
+    width: 25px;
+    height: 25px;
+    border-radius: 6px;
+  }
+
+  #product .product__configurator--module .config-none-toggle__box svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  #product .product__configurator--module .config-none-toggle__label {
+    font-size: 1rem;
+  }
+
+  #product .product__configurator--module .config-group__none + .config-group__options {
+    padding-top: 12px;
+  }
+
+  #product .product__configurator--module .config-group__options--text {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    padding: 12px;
+  }
+
+  #product .product__configurator--module .config-option--text .config-option__card {
+    min-height: 94px;
+    padding: 10px 10px 10px 38px;
+  }
+
+  #product .product__configurator--module .config-option--text .config-option__checkbox {
+    width: 16px;
+    height: 16px;
+    left: 12px;
+    border-radius: 100%;
+  }
+
+  #product .product__configurator--module .config-option--text .config-option__checkbox::after {
+    left: 5px;
+    top: 2px;
+    width: 4px;
+    height: 8px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+  }
+
+  #product .product__configurator--module .config-option--text .config-option__name {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  #product .product__configurator--module .config-option--text .config-option__impact {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  #product .product__configurator--module .config-group__options--image {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #product .product__configurator--module .config-group__options--image[data-image-columns] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #product .product__configurator--module .config-option--image .config-option__preview {
+    height: 110px;
+  }
+
+  #product .product__configurator--module .configurator-summary {
+    padding: 12px;
+  }
+
+}
+
+/* Failsafe when configurator renders outside `#product`. */
+.product__configurator.js-product-variants,
+.product__configurator.product__configurator--module {
+  border-top: 1px solid var(--color-gray-200);
+  display: flex;
+  flex-direction: column;
+}
+
+.product__configurator.js-product-variants .config-group__options,
+.product__configurator.product__configurator--module .config-group__options {
+  display: grid;
+}
+
+.product__configurator.js-product-variants .config-option > input,
+.product__configurator.product__configurator--module .config-option > input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.product__configurator.js-product-variants .config-option__card,
+.product__configurator.product__configurator--module .config-option__card {
+  display: flex;
+  flex-direction: column;
+}

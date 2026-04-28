@@ -1,0 +1,270 @@
+.pzpc-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 14px;
+}
+
+.pzpc-editor__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pzpc-editor__actions-left,
+.pzpc-editor__actions-right {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pzpc-editor__actions-right {
+  margin-left: auto;
+}
+
+.pzpc-editor__section-header {
+  padding: 14px 16px;
+  border-bottom: 1px solid #edf2f7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.pzpc-editor__section-title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.pzpc-editor__section-body {
+  padding: 0;
+  border: 0;
+}
+
+.pzpc-editor__empty {
+  padding: 18px;
+  border: 1px dashed #d0d9e3;
+  border-radius: 10px;
+  background: #fafcfe;
+  color: #51606f;
+}
+
+.pzpc-editor__group {
+  border: 1px solid #dfe7ef;
+  border-radius: 12px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.pzpc-editor__group-summary {
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.pzpc-editor__group-summary::-webkit-details-marker {
+  display: none;
+}
+
+.pzpc-editor__group-title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.pzpc-editor__section-body > .pzpc-editor__group + .pzpc-editor__group {
+  margin-top: 10px;
+}
+
+.pzpc-editor__group-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pzpc-editor__group-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pzpc-editor__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pzpc-editor__fields {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.pzpc-editor__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.pzpc-editor__field--full {
+  grid-column: 1 / -1;
+}
+
+.pzpc-editor__field label,
+.pzpc-editor__option-field label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #415164;
+  margin: 0;
+}
+
+.pzpc-editor__field input[type="text"],
+.pzpc-editor__field input[type="number"],
+.pzpc-editor__field select,
+.pzpc-editor__option-field input[type="text"],
+.pzpc-editor__option-field input[type="number"],
+.pzpc-editor__option-field select,
+.pzpc-editor__advanced textarea {
+  width: 100%;
+  min-height: 38px;
+}
+
+.pzpc-editor__field input[type="checkbox"],
+.pzpc-editor__option-field input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+.pzpc-editor__checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+}
+
+.pzpc-editor__options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pzpc-editor__option {
+  border: 1px solid #edf2f7;
+  border-radius: 10px;
+  background: #fbfcfd;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pzpc-editor__option-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.pzpc-editor__option-title {
+  font-weight: 700;
+}
+
+.pzpc-editor__option-fields {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.pzpc-editor__option-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.pzpc-editor__option-field--full {
+  grid-column: 1 / -1;
+}
+
+.pzpc-editor__color-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pzpc-editor__color-picker {
+  width: 44px !important;
+  min-width: 44px;
+  height: 38px;
+  padding: 4px;
+  border-radius: 6px;
+}
+
+.pzpc-editor__media-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pzpc-editor__media-preview {
+  margin-top: 8px;
+  border: 1px solid #e6edf4;
+  border-radius: 8px;
+  background: #fff;
+  padding: 8px;
+  max-width: 220px;
+}
+
+.pzpc-editor__media-preview img {
+  display: block;
+  max-width: 100%;
+  max-height: 140px;
+  object-fit: contain;
+}
+
+.pzpc-editor__advanced {
+  margin-top: 14px;
+  border: 1px solid #dfe7ef;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.pzpc-editor__advanced summary {
+  cursor: pointer;
+  padding: 12px 14px;
+  font-weight: 600;
+}
+
+.pzpc-editor__advanced-body {
+  padding: 0 14px 14px;
+}
+
+.pzpc-editor__warning {
+  padding: 12px 14px;
+  border: 1px solid #f0c36d;
+  border-radius: 10px;
+  background: #fff8e8;
+  color: #7a5b00;
+}
+
+@media (max-width: 991px) {
+  .pzpc-editor__fields,
+  .pzpc-editor__option-fields {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .pzpc-editor__actions-right {
+    margin-left: 0;
+  }
+}
