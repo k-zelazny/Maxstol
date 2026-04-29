@@ -1,0 +1,74 @@
+div.glogin {cursor:pointer;}
+
+div.glogin div.customGPlusSignIn::before{
+    width:39px;
+    height:40px;
+    background:url('../../img/new/gl1.png') no-repeat top right;
+    display:inline-block;
+    content:"";
+}
+
+div.glogin div.customGPlusSignIn {
+    padding:0px 0px;
+    background: #4285f4;
+    height:40px;
+    color:#FFF;
+    text-shadow:1px 1px 0px #41577d;
+    font-size:13px;
+    display:inline-block;
+}
+div.glogin div.customGPlusSignIn span {
+    display:inline-block;
+    padding:0px 5px;
+    position:relative;
+    top:-14px;
+    font-weight:bold;
+}
+
+div.glogin div.customGPlusSignIn:after{
+    width:2px;
+    height:40px;
+    background:url('../../img/new/gl3.png') no-repeat top left;
+    display:inline-block;
+    content: "";
+}
+
+.glogin-link {
+    float:right;
+    border-left: 1px solid #515151;
+    display: block;
+    color: white;
+    font-weight: bold;
+    padding: 8px 10px 3px 10px;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    line-height: 18px;
+}
+
+.gloader{
+    display:none;
+    position:fixed;
+    bottom:0px;
+    right:0px;
+    height:40px;
+    width:80px;
+    background:#C9210D url('../../img/loading.gif') no-repeat center;
+}
+
+.loginpopupsocial {
+    display:inline-block;
+    float:left;
+    margin-right:10px;
+}
+.loginpopupsocial span {
+    color:#FFF!important;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.2)!important;
+    font-family:arial!important;
+}
+
+
+.glogin.customBtnDisplayNav2, .glogin.customBtnDisplayNav1 {
+    margin-top: 3px;
+    margin-left:13px;
+    margin-right:13px;
+}
