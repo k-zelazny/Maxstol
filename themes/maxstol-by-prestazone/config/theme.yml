@@ -37,6 +37,15 @@ assets:
     contact:
       - id: contact
         path: assets/css/contact.css
+    authentication:
+      - id: authentication
+        path: assets/css/authentication.css
+    password:
+      - id: password
+        path: assets/css/password.css
+    registration:
+      - id: registration
+        path: assets/css/registration.css
   js:
     all:
       # Libraries

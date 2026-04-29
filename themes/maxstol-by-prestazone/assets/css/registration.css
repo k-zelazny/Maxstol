@@ -1,0 +1,247 @@
+#registration #wrapper {
+  background: var(--color-gray-50);
+  padding-block: 96px;
+}
+
+#registration #content-wrapper .page-footer {
+  display: none;
+}
+
+#registration .auth-page {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 128px;
+}
+
+@media (max-width: 1279.98px) {
+  #registration .auth-page {
+    gap: 60px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #registration .auth-page {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+/* Left Column */
+#registration .auth-page__column--left .auth-page__reassurance {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding: 0;
+  margin: 0;
+}
+
+#registration .auth-page__column--left .auth-page__reassurance li {
+  display: flex;
+  gap: 10px;
+}
+
+#registration .auth-page__column--left .auth-page__reassurance li svg {
+  margin-block-start: 5px;
+}
+
+#registration .auth-page__column--left .auth-page__reassurance li span {
+  display: block;
+}
+
+#registration .auth-page__column--left .auth-page__reassurance li .auth-page__reassurance-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-gray-900);
+  margin-bottom: 8px;
+}
+
+#registration .auth-page__column--left .auth-page__reassurance li .auth-page__reassurance-desc {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-gray-500);
+}
+
+@media (max-width: 767.98px) {
+  #registration .auth-page__column--left .auth-page__reassurance li .auth-page__reassurance-title {
+    font-size: 1rem;
+  }
+  
+  #registration .auth-page__column--left .auth-page__reassurance li .auth-page__reassurance-desc {
+    font-size: 0.875rem;
+  }
+}
+/* END Left Column */
+
+/* Right Column */
+#registration .auth-page__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #333;
+  margin-bottom: 0;
+}
+
+#registration .auth-page__column--right {
+  background: var(--color-white);
+  box-shadow: 0px 1px 2px -1px #0000001A, 
+              0px 1px 3px 0px #0000001A;
+  border-radius: 8px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#registration .auth-page__column--right .hr {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--color-gray-500);
+  width: 100%;
+  margin: 0 auto;
+  z-index: 1;
+  position: relative;
+}
+
+#registration .auth-page__column--right .hr::before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: var(--color-gray-200);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 0;
+  display: block;
+}
+
+#registration .auth-page__column--right .hr::after {
+  content: attr(data-content);
+  padding-inline: 24px;
+  width: fit-content;
+  margin: 0 auto;
+  background: var(--color-white);
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+#registration .auth-page__column--right div.customGPlusSignIn {
+  width: 100%;
+  height: unset;
+  border: 1px solid var(--color-gray-200);
+  padding: 10px;
+  background: var(--color-white);
+  border-radius: 8px;
+  transition: border-color .2s ease-in-out;
+}
+
+#registration .auth-page__column--right div.customGPlusSignIn:hover {
+  border-color: var(--color-red-400);
+}
+
+#registration .auth-page__column--right div.customGPlusSignIn::before, 
+#registration .auth-page__column--right div.customGPlusSignIn::after {
+  display: none;
+}
+
+#registration .auth-page__column--right div.customGPlusSignIn > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0;
+  top: unset;
+}
+
+#registration .auth-page__column--right div.customGPlusSignIn > span::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_2846_445)'%3E%3Cpath d='M19.1667 10.4007C19.1667 9.76506 19.1151 9.12594 19.0052 8.50057H10.1847V12.1016H15.2358C15.0262 13.263 14.3527 14.2904 13.3665 14.9433V17.2798H16.38C18.1496 15.6511 19.1667 13.2458 19.1667 10.4007Z' fill='%234285F4'/%3E%3Cpath d='M10.1847 19.5373C12.7068 19.5373 14.8337 18.7092 16.3834 17.2798L13.3699 14.9433C12.5315 15.5136 11.4492 15.8366 10.1881 15.8366C7.74849 15.8366 5.67996 14.1907 4.93776 11.9779H1.82809V14.3866C3.41557 17.5444 6.64894 19.5373 10.1847 19.5373Z' fill='%2334A853'/%3E%3Cpath d='M4.93433 11.9779C4.54262 10.8165 4.54262 9.55888 4.93433 8.39748V5.98877H1.8281C0.501765 8.63113 0.501755 11.7442 1.82809 14.3866L4.93433 11.9779Z' fill='%23FBBC04'/%3E%3Cpath d='M10.1847 4.53529C11.5179 4.51468 12.8064 5.01635 13.772 5.93722L16.4418 3.26737C14.7513 1.6799 12.5075 0.807126 10.1847 0.834615C6.64894 0.834615 3.41558 2.82756 1.8281 5.98877L4.93433 8.39748C5.67309 6.1812 7.74505 4.53529 10.1847 4.53529Z' fill='%23EA4335'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2846_445'%3E%3Crect width='20' height='20' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+  background-size: 100%;
+  display: block;
+}
+
+#registration .auth-page__column--right div.customGPlusSignIn .buttonText {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--color-gray-900);
+  text-shadow: none;
+}
+
+#registration .auth-page .register-form__login-prompt {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0;
+}
+
+#registration .auth-page .register-form__login-prompt a {
+  color: var(--color-red-400);
+}
+
+@media (max-width: 767.98px) {
+  #registration .auth-page__column--right {
+    padding-inline: 12px;
+  }
+}
+/* END Right Column */
+
+/* Form */
+#registration .auth-page form .form-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--color-gray-900);
+  margin-bottom: 8px;
+}
+
+#registration .auth-page form .form-control {
+  background: var(--color-gray-50);
+  border-color: var(--color-gray-300);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--color-gray-500);
+  padding: 12px 16px;
+  border-radius: 8px;
+}
+
+#registration .auth-page form.was-validated .form-control:invalid {
+  border-color: var(--color-red-400);
+}
+
+#registration .auth-page form .password-field [data-action="show-password"] {
+  display: none;
+}
+
+#registration .auth-page form [type="submit"] {
+  width: 100%;
+  justify-content: center;
+  line-height: 1.5rem;
+}
+
+#registration form .form-footer {
+  margin: 0;
+}
+
+#registration .auth-page__column--right .form-check-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-gray-500);
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+#registration .auth-page form .form-check-input {
+  width: 16px;
+  height: 16px;
+}
+/* END Form */

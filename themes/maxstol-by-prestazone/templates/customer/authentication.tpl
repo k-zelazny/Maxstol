@@ -1,0 +1,110 @@
+{**
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *}
+{$componentName = 'login'}
+
+{extends file='page.tpl'}
+
+{block name='container_class'}container container--limited-sm{/block}
+
+{block name='page_title'}
+{/block}
+
+{block name='page_content'}
+  {block name='login_form_container'}
+    <div class="{$componentName}">
+      <section class="auth-page">
+        <div class="auth-page__column auth-page__column--left">
+          <ol class="auth-page__reassurance">
+            <li>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_2846_433)">
+                  <path d="M19.1272 7.89384L18.2355 7.00102C18.0469 6.81332 17.9436 6.56305 17.9436 6.29789V5.03464C17.9436 3.39201 16.6071 2.05527 14.9648 2.05527H13.7017C13.4406 2.05527 13.1844 1.949 12.9997 1.76428L12.107 0.871465C10.9453 -0.290488 9.0567 -0.290488 7.89495 0.871465L7.0003 1.76428C6.81561 1.949 6.55943 2.05527 6.29828 2.05527H5.03525C3.39291 2.05527 2.0564 3.39201 2.0564 5.03464V6.29789C2.0564 6.56305 1.95313 6.81332 1.76547 7.00102L0.872803 7.89284C0.309801 8.45594 0 9.20476 0 10.0002C0 10.7957 0.310793 11.5446 0.872803 12.1067L1.76447 12.9995C1.95313 13.1872 2.0564 13.4374 2.0564 13.7026V14.9659C2.0564 16.6085 3.39291 17.9452 5.03525 17.9452H6.29828C6.55943 17.9452 6.81561 18.0515 7.0003 18.2362L7.89296 19.13C8.47384 19.71 9.23642 20 9.99901 20C10.7616 20 11.5242 19.71 12.1051 19.129L12.9977 18.2362C13.1844 18.0515 13.4406 17.9452 13.7017 17.9452H14.9648C16.6071 17.9452 17.9436 16.6085 17.9436 14.9659V13.7026C17.9436 13.4374 18.0469 13.1872 18.2355 12.9995L19.1272 12.1077C19.6892 11.5446 20 10.7967 20 10.0002C20 9.20376 19.6902 8.45594 19.1272 7.89384ZM14.5229 8.84028L8.56519 12.8128C8.39738 12.925 8.20475 12.9796 8.0141 12.9796C7.75792 12.9796 7.50372 12.8803 7.31209 12.6886L5.32618 10.7024C4.93794 10.3141 4.93794 9.68642 5.32618 9.29811C5.71443 8.9098 6.34197 8.9098 6.73022 9.29811L8.14021 10.7083L13.4207 7.18773C13.8785 6.88284 14.4941 7.00598 14.7979 7.46282C15.1028 7.91966 14.9796 8.53639 14.5229 8.84028Z" fill="#CE2B2D"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_2846_433">
+                    <rect width="20" height="20" fill="white"/>
+                  </clipPath>
+                </defs>
+              </svg>
+              <div>
+                <span class="auth-page__reassurance-title">
+                  {l s='Exclusive beds made from Polish wood' d='Shop.Theme.Customeraccount'}
+                </span>
+                <span class="auth-page__reassurance-desc">
+                  {l s='Log in to discover our unique wooden designs.' d='Shop.Theme.Customeraccount'}
+                </span>
+              </div>
+            </li>
+            
+            <li>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_2846_433)">
+                  <path d="M19.1272 7.89384L18.2355 7.00102C18.0469 6.81332 17.9436 6.56305 17.9436 6.29789V5.03464C17.9436 3.39201 16.6071 2.05527 14.9648 2.05527H13.7017C13.4406 2.05527 13.1844 1.949 12.9997 1.76428L12.107 0.871465C10.9453 -0.290488 9.0567 -0.290488 7.89495 0.871465L7.0003 1.76428C6.81561 1.949 6.55943 2.05527 6.29828 2.05527H5.03525C3.39291 2.05527 2.0564 3.39201 2.0564 5.03464V6.29789C2.0564 6.56305 1.95313 6.81332 1.76547 7.00102L0.872803 7.89284C0.309801 8.45594 0 9.20476 0 10.0002C0 10.7957 0.310793 11.5446 0.872803 12.1067L1.76447 12.9995C1.95313 13.1872 2.0564 13.4374 2.0564 13.7026V14.9659C2.0564 16.6085 3.39291 17.9452 5.03525 17.9452H6.29828C6.55943 17.9452 6.81561 18.0515 7.0003 18.2362L7.89296 19.13C8.47384 19.71 9.23642 20 9.99901 20C10.7616 20 11.5242 19.71 12.1051 19.129L12.9977 18.2362C13.1844 18.0515 13.4406 17.9452 13.7017 17.9452H14.9648C16.6071 17.9452 17.9436 16.6085 17.9436 14.9659V13.7026C17.9436 13.4374 18.0469 13.1872 18.2355 12.9995L19.1272 12.1077C19.6892 11.5446 20 10.7967 20 10.0002C20 9.20376 19.6902 8.45594 19.1272 7.89384ZM14.5229 8.84028L8.56519 12.8128C8.39738 12.925 8.20475 12.9796 8.0141 12.9796C7.75792 12.9796 7.50372 12.8803 7.31209 12.6886L5.32618 10.7024C4.93794 10.3141 4.93794 9.68642 5.32618 9.29811C5.71443 8.9098 6.34197 8.9098 6.73022 9.29811L8.14021 10.7083L13.4207 7.18773C13.8785 6.88284 14.4941 7.00598 14.7979 7.46282C15.1028 7.91966 14.9796 8.53639 14.5229 8.84028Z" fill="#CE2B2D"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_2846_433">
+                    <rect width="20" height="20" fill="white"/>
+                  </clipPath>
+                </defs>
+              </svg>
+              <div>
+                <span class="auth-page__reassurance-title">
+                  {l s='For all ages — comfort that lasts' d='Shop.Theme.Customeraccount'}
+                </span>
+                <span class="auth-page__reassurance-desc">
+                  {l s='Our collections ensure safety and comfort for children and seniors.' d='Shop.Theme.Customeraccount'}
+                </span>
+              </div>
+            </li>
+            
+            <li>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_2846_433)">
+                  <path d="M19.1272 7.89384L18.2355 7.00102C18.0469 6.81332 17.9436 6.56305 17.9436 6.29789V5.03464C17.9436 3.39201 16.6071 2.05527 14.9648 2.05527H13.7017C13.4406 2.05527 13.1844 1.949 12.9997 1.76428L12.107 0.871465C10.9453 -0.290488 9.0567 -0.290488 7.89495 0.871465L7.0003 1.76428C6.81561 1.949 6.55943 2.05527 6.29828 2.05527H5.03525C3.39291 2.05527 2.0564 3.39201 2.0564 5.03464V6.29789C2.0564 6.56305 1.95313 6.81332 1.76547 7.00102L0.872803 7.89284C0.309801 8.45594 0 9.20476 0 10.0002C0 10.7957 0.310793 11.5446 0.872803 12.1067L1.76447 12.9995C1.95313 13.1872 2.0564 13.4374 2.0564 13.7026V14.9659C2.0564 16.6085 3.39291 17.9452 5.03525 17.9452H6.29828C6.55943 17.9452 6.81561 18.0515 7.0003 18.2362L7.89296 19.13C8.47384 19.71 9.23642 20 9.99901 20C10.7616 20 11.5242 19.71 12.1051 19.129L12.9977 18.2362C13.1844 18.0515 13.4406 17.9452 13.7017 17.9452H14.9648C16.6071 17.9452 17.9436 16.6085 17.9436 14.9659V13.7026C17.9436 13.4374 18.0469 13.1872 18.2355 12.9995L19.1272 12.1077C19.6892 11.5446 20 10.7967 20 10.0002C20 9.20376 19.6902 8.45594 19.1272 7.89384ZM14.5229 8.84028L8.56519 12.8128C8.39738 12.925 8.20475 12.9796 8.0141 12.9796C7.75792 12.9796 7.50372 12.8803 7.31209 12.6886L5.32618 10.7024C4.93794 10.3141 4.93794 9.68642 5.32618 9.29811C5.71443 8.9098 6.34197 8.9098 6.73022 9.29811L8.14021 10.7083L13.4207 7.18773C13.8785 6.88284 14.4941 7.00598 14.7979 7.46282C15.1028 7.91966 14.9796 8.53639 14.5229 8.84028Z" fill="#CE2B2D"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_2846_433">
+                    <rect width="20" height="20" fill="white"/>
+                  </clipPath>
+                </defs>
+              </svg>
+              <div>
+                <span class="auth-page__reassurance-title">
+                  {l s='Designed with you in mind — sign up and give it a try' d='Shop.Theme.Customeraccount'}
+                </span>
+                <span class="auth-page__reassurance-desc">
+                  {l s='Log in to get early access to new collections and offers.' d='Shop.Theme.Customeraccount'}
+                </span>
+              </div>
+            </li>
+          </ol>
+        </div>
+        
+        <div class="auth-page__column auth-page__column--right">
+          <h1 class="auth-page__title">
+            {l s='Welcome back' d='Shop.Theme.Customeraccount'}
+          </h1>
+          
+          {hook h='glogin'}
+          
+          <div class="hr" data-content="{l s='or' d='Shop.Theme.Customeraccount'}"></div>
+          
+          {render file='customer/_partials/login-form.tpl' ui=$login_form}
+          
+          {block name='display_after_login_form'}
+            {hook h='displayCustomerLoginFormAfter'}
+          {/block}
+          
+          <div class="auth-page__register">
+            {l s='No account?' d='Shop.Theme.Customeraccount'}
+            <a href="{$urls.pages.register}" class="btn btn-outline-primary" data-link-action="display-register-form">
+              {l s='Create your account' d='Shop.Theme.Actions'}
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  {/block}
+{/block}
